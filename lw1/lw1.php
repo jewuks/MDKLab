@@ -14,5 +14,3 @@ print("\n");
 $date->minusDay(56);
 $dates->format('en');
 $date->format('ru');
-
-?>

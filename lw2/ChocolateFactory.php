@@ -10,5 +10,4 @@ abstract class ChocolateFactory extends Snacks
         $this->prepare($type);
         $this->cut($type);
     }
-
 }
