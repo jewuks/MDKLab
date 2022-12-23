@@ -6,7 +6,7 @@ abstract class Snacks
     protected $chocolate;
     protected $toppings = array();
 
-    function prepare($type): void
+    function prepare(string $type): void
     {
         if ($type === 'Белый') {
             $this->chocolate = "Белый";
@@ -23,11 +23,11 @@ abstract class Snacks
             print $this->toppings[$i] . "\n";
         }
     }
-    function cut($type): void
+    function cut(string $type): void
     {
-        if ($type = "Белый") {
+        if ($type == "Белый") {
             print "Snack нужно резать по вертикали кубиками" . "\n";
-        } elseif ($type = "Чёрный") {
+        } elseif ($type == "Чёрный") {
             print "Snack нужно резать по вертикали кусочками" . "\n";
         }
     }

@@ -2,7 +2,7 @@
 
 class Date
 {
-    public function __construct($day, $month, $year)
+    public function __construct(int $day, int $month, int $year)
     {
         $this->day = $day;
         $this->month = $month;
@@ -63,7 +63,7 @@ class Date
         print("Разница дат " . $i . " Дней" . "\n");
         return $i;
     }
-    public function minusDay($int): int
+    public function minusDay(int $int): int
     {
         for ($i = 0; $i < $int; $i++) {
             $this->day -= 1;
