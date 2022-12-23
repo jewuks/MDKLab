@@ -63,7 +63,7 @@ class Date
         print("Разница дат " . $i . " Дней" . "\n");
         return $i;
     }
-    public function minusDay($int)
+    public function minusDay($int): int
     {
         for ($i = 0; $i < $int; $i++) {
             $this->day -= 1;
