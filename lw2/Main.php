@@ -6,10 +6,9 @@ class Test extends ChocolateFactory
     {
         $this->orderSnack($type);
     }
-
 }
 $beliy = new Test;
 $beliy->createSnack("Белый");
-
+$beliy->createSnack("Чёрный");
 
 ?>

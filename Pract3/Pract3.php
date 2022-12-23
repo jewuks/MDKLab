@@ -15,7 +15,7 @@
         $strEndSolution = calculator($str);
         echo $strEndSolution;
 
-        function calculator($str) : string
+        function calculator($str): string
         {
             $solution = 0;
             $arrayNumbers = [];
@@ -45,7 +45,7 @@
 
             $solution = $arrayNumbers[0];
 
-            for ($i = 1, $k = 0; $i < $operationsCount + 1 ; $i++) {
+            for ($i = 1, $k = 0; $i < $operationsCount + 1; $i++) {
                 if ($arrayOperations[$k] === '+')
                     $solution += $arrayNumbers[$i];
 

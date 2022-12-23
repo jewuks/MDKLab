@@ -26,8 +26,7 @@ class Calculator
         if ($znachenie == 0) {
             $this->number = 0;
             return $this;
-
-        }else {
+        } else {
             $this->number = $this->number / $znachenie;
             return $this;
         }
@@ -38,4 +37,3 @@ class Calculator
         return $this->number;
     }
 }
-?>

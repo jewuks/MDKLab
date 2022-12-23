@@ -4,7 +4,7 @@ function sumTime(string $firstDate, string $secondDate): string
 {
     $simbols = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', ':'];
 
-    for($i = 0; $i < strlen($firstDate); $i++) {
+    for ($i = 0; $i < strlen($firstDate); $i++) {
         if (in_array($firstDate[$i], $simbols)) {
             continue;
         } else {
@@ -13,7 +13,7 @@ function sumTime(string $firstDate, string $secondDate): string
         }
     }
 
-    for($i = 0; $i < strlen($secondDate); $i++) {
+    for ($i = 0; $i < strlen($secondDate); $i++) {
         if (in_array($secondDate[$i], $simbols)) {
             continue;
         } else {
@@ -56,21 +56,17 @@ function sumTime(string $firstDate, string $secondDate): string
         $resultHours -= 24;
     }
 
-    if($resultSeconds < 10)
-    {
+    if ($resultSeconds < 10) {
         $resultSeconds = "0" . $resultSeconds;
     }
-    if($resultMinutes < 10)
-    {
+    if ($resultMinutes < 10) {
         $resultMinutes = "0" . $resultMinutes;
     }
-    if($resultHours < 10)
-    {
+    if ($resultHours < 10) {
         $resultHours = "0" . $resultHours;
     }
 
     $result .= $resultHours . ":" . $resultMinutes . ":" . $resultSeconds;
     return $result;
 }
-echo sumTime($argv[1],$argv[2]);
-?>
+echo sumTime($argv[1], $argv[2]);

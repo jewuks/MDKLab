@@ -11,38 +11,27 @@ abstract class ChocolateFactory extends Snacks
     }
     function prepare($type)
     {
-        if($type === 'Белый')
-        {
+        if ($type === 'Белый') {
             $this->chocolate = "Белый";
-            $this->toppings = ["Шипучка","Изюм","Орехи"];
+            $this->toppings = ["Шипучка", "Изюм", "Орехи"];
         }
-        if($type === "Чёрный")
-        {
+        if ($type === "Чёрный") {
             $this->chocolate = "Чёрный";
-            $this->toppings = ["Изюм","Орехи"];
+            $this->toppings = ["Изюм", "Орехи"];
         }
         print "Началось создание snack-a :  " . $this->name . "\n";
         print "Добавляется шоколад : " . $this->chocolate . "\n";
         print "Добавлены начинки : \n";
-        for ($i = 0; $i < count($this->toppings); $i++)
-        {
+        for ($i = 0; $i < count($this->toppings); $i++) {
             print $this->toppings[$i] . "\n";
         }
     }
     function cut($type)
     {
-        if($type = "Белый")
-        {
+        if ($type = "Белый") {
             print "Snack нужно резать по вертикали кубиками" . "\n";
-        }
-        elseif($type = "Чёрный")
-        {
+        } elseif ($type = "Чёрный") {
             print "Snack нужно резать по вертикали кусочками" . "\n";
         }
     }
-
-
 }
-
-
-?>

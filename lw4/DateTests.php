@@ -1,5 +1,6 @@
 <?php
 require_once 'lw1/Date.php';
+
 use PHPUnit\Framework\TestCase;
 
 class DateTests extends TestCase
@@ -9,8 +10,8 @@ class DateTests extends TestCase
 
     protected function setUp(): void
     {
-        $this->dateone = new Date(21,6,2022);
-        $this->datetwo = new Date(9,6,2022);
+        $this->dateone = new Date(21, 6, 2022);
+        $this->datetwo = new Date(9, 6, 2022);
     }
     public function testMinusDay()
     {
@@ -21,7 +22,4 @@ class DateTests extends TestCase
     {
         $this->assertEquals(12, $this->dateone->diffday($this->datetwo));
     }
-
 }
-
-?>

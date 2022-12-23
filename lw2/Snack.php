@@ -9,5 +9,3 @@ abstract class Snacks
     abstract function prepare($type);
     abstract function cut($type);
 }
-
-?>
