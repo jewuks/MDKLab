@@ -1,3 +1,6 @@
+// Практическая выполнена совместно с Ефремовым Алексеем
+
+
 <form action="" method="POST" class="form-example">
     <div class="form-group">
         <label for="name">Строка с примером : </label>
@@ -11,7 +14,7 @@
         <?php
 
         $str = $_POST["a"];
-        $str = str_split($str);
+        $str = explode(" ", $str);
         $strEndSolution = calculator($str);
         echo $strEndSolution;
 
@@ -24,9 +27,8 @@
             $operationsCount = 0;
 
 
-
             for ($i = 0; $i < count($str); $i++) {
-                if ($str[$i] !== '+' && $str[$i] !== '-' && $str[$i] !== '*' && $str[$i] !== '/') {
+                if ($str[$i] !== '+' && $str[$i] !== '-' && $str[$i] !== '*' && $str[$i] !== '/' && $str[$i] !== '=') {
                     $arrayNumbers[$numbersCount] = $str[$i];
                 } else {
                     if ($str[$i] === '+')
@@ -37,6 +39,8 @@
                         $arrayOperations[$operationsCount] = '*';
                     if ($str[$i] === '/')
                         $arrayOperations[$operationsCount] = '/';
+                    if ($str[$i] === '=')
+                        $arrayOperations[$operationsCount] = '=';
 
                     $operationsCount++;
                     $numbersCount++;
@@ -58,11 +62,16 @@
                 elseif ($arrayOperations[$k] === '/')
                     $solution = $solution / $arrayNumbers[$i];
 
+                elseif ($arrayOperations[$k] === '=')
+                    if ($solution == $arrayNumbers[$i]) {
+                        $text = "Утверждение верно!";
+                    } else $text = "Утверждение неверно!";
+
                 $k++;
             }
 
             $str = '';
-            $str = $str .= "Result : " . $solution;
+            $str = $str .= $solution . "\n" . $text;
 
             return $str;
         }
